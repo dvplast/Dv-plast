@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДВ Пласт 2020 ЕООД</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        section {
+            padding: 40px 0;
+        }
+        .card {
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header data-aos="fade-down">
+    <h1>Добре дошли в ДВ Пласт 2020 ЕООД</h1>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-aos="fade-up">
+    <div class="container">
+        <a class="navbar-brand" href="#">Начало</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#about">За нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Мнения</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faq">ЧЗВ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Галерия</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Контакти</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="about" class="container" data-aos="fade-left">
+    <h2>За нас</h2>
+    <p>ДВ Пласт 2020 ЕООД е водеща компания в областта на PVC и алуминиеви профили, предлагаща качествени продукти и услуги на своите клиенти.</p>
+</section>
+
+<section id="services" class="container" data-aos="fade-right">
+    <h2>Услуги</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">PVC дограма</h5>
+                    <p class="card-text">Производство и монтаж на висококачествена PVC дограма.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Алуминиеви профили</h5>
+                    <p class="card-text">Монтаж на алуминиеви профили с дълъг живот и устойчивост.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ремонт и поддръжка</h5>
+                    <p class="card-text">Ремонт на прозорци и врати, както и поддръжка на системите.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="container" data-aos="zoom-in">
+    <h2>Галерия</h2>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <img src="example1.jpg" alt="Проект 1" class="img-fluid" data-bs-toggle="modal" data-bs-target="#image1">
+        </div>
+        <div class="col-md-6 mb-3">
+            <img src="example2.jpg" alt="Проект 2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#image2">
+        </div>
+    </div>
+
+    <!-- Модали за изображения -->
+    <div class="modal fade" id="image1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <img src="example1.jpg" alt="Проект 1" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="modal fade" id="image2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <img src="example2.jpg" alt="Проект 2" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="container" data-aos="fade-up">
+    <h2>Контакти</h2>
+    <form id="contactForm">
+        <input type="text" class="form-control mb-2" id="name" placeholder="Вашето име" required>
+        <input type="email" class="form-control mb-2" id="email" placeholder="Вашият имейл" required>
+        <textarea class="form-control mb-2" id="message" placeholder="Вашето съобщение" required></textarea>
+        <button class="btn btn-success">Изпрати</button>
+    </form>
+</section>
+
+<footer data-aos="fade-up">
+    <p>© 2025 ДВ Пласт 2020 ЕООД — Всички права запазени.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    // Инициализация на AOS
+    AOS.init();
+
+    // Валидация на формуляра
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (this.checkValidity()) {
+            alert("Вашето съобщение е изпратено успешно!");
+            this.reset();
+        } else {
+            alert("Моля, попълнете всички полета правилно.");
+        }
+    });
+</script>
+</body>
+</html>
